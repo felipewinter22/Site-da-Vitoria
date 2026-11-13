@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Você é o Amor da Minha Vida 💖</title>
+<meta name="theme-color" content="#2b0716">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body class="lock">
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<section id="login-overlay">
+  <form id="login-box" autocomplete="off">
+    <div class="selo">💖</div>
+    <h2>Uma surpresa te espera</h2>
+    <p class="sub">Entre para abrir o seu presente</p>
+    <input type="text" id="usuario" placeholder="Usuário" autocapitalize="none" aria-label="Usuário">
+    <input type="password" id="senha" placeholder="Senha" aria-label="Senha">
+    <button type="submit" class="btn">Entrar</button>
+    <p id="erro" role="alert"></p>
+  </form>
+</section>
+
+<main id="conteudo" hidden>
+  <header class="hero">
+    <div class="hero-in" data-par>
+      <h1>Para Você 💘</h1>
+      <p class="frase" id="frase">Só você sabe o quanto é importante pra mim!<br>Você é o amor da minha vida.</p>
+    </div>
+    <a href="#coracao" class="cue" aria-label="Descer"><span></span></a>
+  </header>
+
+  <section id="coracao" class="sec rv">
+    <h2 class="tit">Aqui dentro, só você</h2>
+    <div id="heart3d" aria-label="Coração 3D interativo: arraste para girar, toque para ouvir o coração bater"></div>
+    <p class="dica">Arraste para girar · toque no coração</p>
+    <p id="msg-coracao" class="msg-c" aria-live="polite"></p>
+    <div id="cronometro-wrap"><div id="cronometro" aria-label="Tempo juntos"></div></div>
+  </section>
+
+  <section id="carta" class="sec rv">
+    <h2 class="tit">Uma cartinha</h2>
+    <button class="env" id="env" aria-expanded="false" aria-label="Abrir carta">
+      <span class="env-back"></span>
+      <span class="papel"><span class="mensagem">Meu amor,<br>
+        fiz essa cartinha para te lembrar o quanto você é importante na minha vida.<br>
+        Sua presença deixa meus dias mais leves, mais felizes e mais completos.<br><br>
+        Eu te amo mais do que palavras podem dizer, e espero continuar construindo
+        momentos lindos ao seu lado. Obrigado por ser exatamente quem você é.</span></span>
+      <span class="env-front"></span><span class="flap"></span><span class="lacre">💗</span>
+    </button>
+    <p class="dica" id="dica-carta">Toque no envelope para abrir</p>
+  </section>
+
+  <section id="historia" class="sec rv">
+    <h2 class="tit">Nossa história</h2>
+    <ol class="tl" id="tl"></ol>
+  </section>
+
+  <section id="album" class="sec">
+    <h2 class="tit rv">Nossas lembranças</h2>
+    <div class="galeria" id="galeria"></div>
+  </section>
+
+  <footer class="rv"><span id="assinatura"></span></footer>
+</main>
+
+<div id="pergunta-namoro" hidden>
+  <div id="caixa-namoro" role="dialog" aria-modal="true" aria-labelledby="q">
+    <p id="q">Quer me namorar pra sempre? 💞</p>
+    <div class="botoes"><button id="btn-sim" class="btn">Sim 💘</button><button id="btn-nao" class="btn ghost">Não 🙈</button></div>
+  </div>
+</div>
+
+<div id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="lb-x" aria-label="Fechar">✕</button>
+  <button class="lb-p" aria-label="Anterior">‹</button>
+  <img alt=""><button class="lb-n" aria-label="Próxima">›</button>
+  <span class="lb-c"></span>
+</div>
+<div id="toast" role="status"></div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/heart3d.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
